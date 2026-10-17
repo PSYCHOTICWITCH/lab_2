@@ -21,7 +21,7 @@ namespace lab_2
             }
         }
 
-        public string toString()
+        public override string ToString()
         {
             if (floors % 10 == 1 && floors != 11)
             {

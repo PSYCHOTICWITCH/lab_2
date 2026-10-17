@@ -23,6 +23,7 @@ namespace lab_2
                         {
                             Console.WriteLine("Имена");
 
+                            Console.WriteLine("Задайте имя тремя параметрами.");
                             Console.WriteLine("Введите фамилию");
                             string surname = Console.ReadLine();
                             Console.WriteLine("Введите имя");
@@ -32,6 +33,7 @@ namespace lab_2
                             Name name_1 = new(surname, name, patronym);
                             Console.WriteLine("Объект 1 создан");
 
+                            Console.WriteLine("Задайте имя двумя параметрами.");
                             Console.WriteLine("Введите фамилию");
                             surname = Console.ReadLine();
                             Console.WriteLine("Введите имя");
@@ -39,6 +41,7 @@ namespace lab_2
                             Name name_2 = new(surname, name);
                             Console.WriteLine("Объект 2 создан");
 
+                            Console.WriteLine("Задайте имя одним параметром.");
                             Console.WriteLine("Введите имя");
                             name = Console.ReadLine();
                             Name name_3 = new(name);
@@ -174,11 +177,13 @@ namespace lab_2
                         {
                             Console.WriteLine("Имена");
 
+                            Console.WriteLine("Задайте имя одним параметром.");
                             Console.WriteLine("Введите имя");
                             string name = Console.ReadLine();
                             Name name_1 = new(name);
                             Console.WriteLine("Объект задан одним параметром");
 
+                            Console.WriteLine("Задайте имя двумя параметрами.");
                             Console.WriteLine("Введите фамилию");
                             string surname = Console.ReadLine();
                             Console.WriteLine("Введите имя");
@@ -186,6 +191,7 @@ namespace lab_2
                             Name name_2 = new(surname, name);
                             Console.WriteLine("Объект задан двумя параметрами");
 
+                            Console.WriteLine("Задайте имя тремя параметрами.");
                             Console.WriteLine("Введите фамилию");
                             surname = Console.ReadLine();
                             Console.WriteLine("Введите имя");
@@ -195,10 +201,19 @@ namespace lab_2
                             Name name_3 = new(surname, name, patronym);
                             Console.WriteLine("Объект задан тремя параметрами");
 
+                            Console.WriteLine("Задайте имя двумя параметрами.");
+                            Console.WriteLine("Введите фамилию");
+                            surname = Console.ReadLine();
+                            Console.WriteLine("Введите имя");
+                            name = Console.ReadLine();
+                            Name name_4 = new(surname, name);
+                            Console.WriteLine("Объект задан двумя параметрами");
+
                             Console.WriteLine("Созданные имена:");
                             Console.WriteLine(name_1.ToString());
                             Console.WriteLine(name_2.ToString());
                             Console.WriteLine(name_3.ToString());
+                            Console.WriteLine(name_4.ToString());
                             break;
                         }
                     case 5:
