@@ -38,7 +38,14 @@ namespace lab_2
 
         internal void addEmployee(Employee e) 
         {
-            employees[count++] = e;
+            if (count == 9)
+            {
+                Console.WriteLine("Отдел переполнен. Невозможно добавить сотрудника");
+            }
+            else
+            {
+                employees[count++] = e;
+            }
         }
 
     }
