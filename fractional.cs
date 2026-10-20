@@ -24,12 +24,16 @@ namespace lab_2
             this.denominator = 1;
         }
 
-        public int Numerator { get { return numerator; } }
-        public int Denominator { get { return denominator; } }
-
         public override string ToString() 
         { 
-            return $"{this.numerator}/{this.denominator}";
+            if (this.denominator == 1)
+            {
+                return $"{this.numerator}";
+            }
+            else
+            {
+                return $"{this.numerator}/{this.denominator}";
+            }
         }
 
         internal Fraction reduce()
@@ -46,7 +50,7 @@ namespace lab_2
 
             int divider = 2;
 
-            while (divider < max_val) {
+            while (divider <= max_val) {
                 if (this.denominator % divider == 0 && this.numerator % divider == 0)
                 {
                     this.denominator /= divider;

@@ -1,8 +1,15 @@
 ﻿internal class Name
 {
-    private string surname { get; }
-    private string name { get; }
-    private string patronym { get; }
+    private string surname;
+    private string name;
+    private string patronym;
+
+    public Name()
+    {
+        this.surname = "Иванов";
+        this.name = "Иван";
+        this.patronym = "Иванович";
+    }
     public Name(string surname, string name, string patronym) {
         this.surname = surname;
         this.name = name;

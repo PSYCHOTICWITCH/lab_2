@@ -13,11 +13,19 @@ namespace lab_2
         private Employee[] employees;
         private int count;
 
+        public Department()
+        {
+            this.name = "Отдел";
+            employees = new Employee[10];
+            this.count = 0;
+            this.head = null;
+        }
         public Department(string name)
         {
             this.name = name;
             employees = new Employee[10];
             this.count = 0;
+            this.head = null;
         }
 
         public string Name
@@ -28,7 +36,13 @@ namespace lab_2
         public Employee Head
         {
             get { return head; }
-            set { head = value; }
+            set
+            {
+                if (value.Department is Department)
+                {
+                    head = value;
+                }
+            }
         }
 
         public Employee[] Employees
@@ -54,6 +68,12 @@ namespace lab_2
         private string name;
         private Department department;
 
+        public Employee()
+        {
+            this.name = "Иванов";
+            this.department = new();
+            this.department.addEmployee(this);
+        }
         public Employee(string input_name, Department input_department)
         {
             this.name = input_name;
@@ -64,6 +84,11 @@ namespace lab_2
         public string Name 
         { 
             get { return name; } 
+        }
+
+        public Department Department
+        {
+            get { return department; }
         }
 
         public override string ToString()

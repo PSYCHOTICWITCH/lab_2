@@ -8,7 +8,12 @@ namespace lab_2
 {
     internal class House
     {
-        private int floors { get; }
+        private int floors;
+
+        public House() 
+        {
+            this.floors = 1;
+        }
         public House(int floors)
         {
             if (floors > 0)
